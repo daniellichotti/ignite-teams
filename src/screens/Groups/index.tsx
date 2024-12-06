@@ -35,7 +35,7 @@ export function Groups() {
       )}
       />
 
-      <Button
+      <Button  
         title='Criar nova turma'
       />
     </Container>

@@ -1,10 +1,10 @@
 import { Loading } from '@components/Loading';
 import { Roboto_400Regular, Roboto_700Bold, useFonts } from '@expo-google-fonts/roboto';
-import { Players } from '@screens/Players';
+import React from 'react';
 import { StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components';
+import { Routes } from './src/routes';
 import theme from './src/theme/index';
-import React from 'react';
 
 export default function App() {
   const [fontsLoaded] = useFonts({Roboto_400Regular, Roboto_700Bold}) //verifica se a fonte foi carregada
@@ -16,7 +16,7 @@ export default function App() {
         backgroundColor='transparent'
         translucent
       />
-      { fontsLoaded? <Players/> :  <Loading /> } 
+      { fontsLoaded? <Routes/> :  <Loading /> } 
     </ThemeProvider>
   );
 }
